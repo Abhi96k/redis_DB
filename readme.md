@@ -91,3 +91,9 @@ Deleting Data
 
 ````bash
 DEL mykey
+
+## HSET/HGET/HDEL (Hashes)
+Setting Data in a Hash
+
+````bash
+HSET user:100 name "John Doe" email "user@example.com" age "30"
