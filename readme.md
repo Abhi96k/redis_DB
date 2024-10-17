@@ -80,4 +80,14 @@ HGET user:100 email
 #### Setting Data
 
 ```bash
-SET mykey "Hello"
+SET mykey "Hello"
+
+Getting Data
+
+````bash
+GET mykey
+
+Deleting Data
+
+````bash
+DEL mykey
