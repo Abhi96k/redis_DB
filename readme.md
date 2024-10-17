@@ -1,99 +1,80 @@
----
-runme:
-  id: 01JAD7PY4BHTWSPC3XQ3HH0MC7
-  version: v3
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README</title>
+</head>
+<body>
 
-### Queues
+<h2>Queues</h2>
 
-### Pub subs
+<h2>Pub Subs</h2>
 
-### Redis
+<h2>Redis</h2>
 
-## Redis Overview
+<h3>Redis Overview</h3>
 
-**Redis** is an open-source, in-memory data structure store, used as a **database**, **cache**, and **message broker**.
+<p><strong>Redis</strong> is an open-source, in-memory data structure store, used as a <strong>database</strong>, <strong>cache</strong>, and <strong>message broker</strong>.</p>
 
-One of the key features of Redis is its ability to keep all data in memory, which allows for **high performance** and **low latency access** to data.
+<p>One of the key features of Redis is its ability to keep all data in memory, which allows for <strong>high performance</strong> and <strong>low latency access</strong> to data.</p>
 
 <img src="diagram-export-10-17-2024-6_21_27-PM-1.png" alt="Diagram" width="600" height="400" />
 
-## Redis Overview
+<h3>Starting Redis Locally</h3>
 
-**Redis** is an open-source, in-memory data structure store, used as a **database**, **cache**, and **message broker**.
+<p>Let’s start Redis locally and begin using it as a database.</p>
 
-One of the key features of Redis is its ability to keep all data in memory, which allows for **high performance** and **low latency access** to data.
+<h4>Starting Redis with Docker</h4>
 
-## Starting Redis Locally
+<pre><code>docker run --name my-redis -d -p 6379:6379 redis
+</code></pre>
 
-Let’s start Redis locally and begin using it as a database.
+<h4>Connecting to Your Container</h4>
 
-### Starting Redis with Docker
+<pre><code>docker exec -it container_id /bin/bash
+</code></pre>
 
-```bash
-docker run --name my-redis -d -p 6379:6379 redis
+<h4>Connecting to the Redis CLI</h4>
 
-Connecting to Your Container
-````bash
-docker exec -it container_id /bin/bash
+<pre><code>docker exec -it my-redis redis-cli
+</code></pre>
 
-Connecting to the Redis CLI
+<hr>
 
+<h3>Redis as a Database</h3>
 
-```bash
-docker exec -it my-redis redis-cli
+<h4>SET/GET/DEL Commands</h4>
 
-### Redis as a Database
-### SET/GET/DEL Commands
+<h5>Setting Data</h5>
 
-Setting Data
+<pre><code>SET mykey "Hello"
+</code></pre>
 
-```bash
-SET mykey "Hello"
+<h5>Getting Data</h5>
 
-Getting Data
-````bash
-GET mykey
+<pre><code>GET mykey
+</code></pre>
 
-Deleting Data
+<h5>Deleting Data</h5>
 
-````bash
-DEL mykey
+<pre><code>DEL mykey
+</code></pre>
 
-### HSET/HGET/HDEL (Hashes)
-Setting Data in a Hash
-````bash
+<hr>
 
-HSET user:100 name "John Doe" email "user@example.com" age "30"
+<h4>HSET/HGET/HDEL (Hashes)</h4>
 
-Getting Data from a Hash
-````bash
+<h5>Setting Data in a Hash</h5>
 
-HGET user:100 name
+<pre><code>HSET user:100 name "John Doe" email "user@example.com" age "30"
+</code></pre>
+
+<h5>Getting Data from a Hash</h5>
+
+<pre><code>HGET user:100 name
 HGET user:100 email
+</code></pre>
 
-
-## Redis as a Database
-
-### SET/GET/DEL Commands
-
-#### Setting Data
-
-```bash
-SET mykey "Hello"
-
-Getting Data
-
-````bash
-GET mykey
-
-Deleting Data
-
-````bash
-DEL mykey
-
-## HSET/HGET/HDEL (Hashes)
-Setting Data in a Hash
-
-````bash
-HSET user:100 name "John Doe" email "user@example.com" age "30"
+</body>
+</html>
