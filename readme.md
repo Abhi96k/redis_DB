@@ -5,5 +5,13 @@ runme:
 ---
 
 ### Queues
+
 ### Pub subs
+
 ### Redis
+
+## Redis Overview
+
+**Redis** is an open-source, in-memory data structure store, used as a **database**, **cache**, and **message broker**.
+
+One of the key features of Redis is its ability to keep all data in memory, which allows for **high performance** and **low latency access** to data.
