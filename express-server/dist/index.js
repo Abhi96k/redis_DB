@@ -17,7 +17,9 @@ const redis_1 = require("redis");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 // Create Redis client
-const client = (0, redis_1.createClient)();
+const client = (0, redis_1.createClient)({
+    url: "redis://localhost:8081",
+});
 // Redis error handling
 client.on("error", (err) => console.log("Redis Client Error", err));
 // Input validation middleware

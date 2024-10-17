@@ -10,7 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const redis_1 = require("redis");
-const client = (0, redis_1.createClient)();
+const client = (0, redis_1.createClient)({
+    url: "redis://localhost:8081",
+});
 function processSubmission(submission) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -34,7 +36,6 @@ function startWorker() {
         try {
             yield client.connect();
             console.log("Worker connected to Redis.");
-            // Main loop
             while (true) {
                 try {
                     const submission = yield client.brPop("problems", 0);
