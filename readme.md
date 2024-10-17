@@ -54,3 +54,30 @@ SET mykey "Hello"
 Getting Data
 ````bash
 GET mykey
+
+Deleting Data
+
+````bash
+DEL mykey
+
+### HSET/HGET/HDEL (Hashes)
+Setting Data in a Hash
+````bash
+
+HSET user:100 name "John Doe" email "user@example.com" age "30"
+
+Getting Data from a Hash
+````bash
+
+HGET user:100 name
+HGET user:100 email
+
+
+## Redis as a Database
+
+### SET/GET/DEL Commands
+
+#### Setting Data
+
+```bash
+SET mykey "Hello"
